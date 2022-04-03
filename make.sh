@@ -29,9 +29,9 @@ for PLGIN in ${PLUGINS}; do
 
     for FILE in ${PLGIN_FILES}; do
       INSTALL_FILE=$(echo $FILE | sed -r "s#$PLGIN_SRC_DIR#$INSTALLEDDIR#")
-      echo "${INSTALL_FILE}"
-      #yes | cp -f  $FILE $INSTALL_FILE
-      #ls -lad "${INSTALL_FILE}"
+      #echo "${INSTALL_FILE}"
+      yes | cp -f  $FILE $INSTALL_FILE
+      ls -lad "${INSTALL_FILE}"
     done
   fi
 done
