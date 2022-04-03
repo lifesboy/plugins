@@ -24,7 +24,7 @@ for PLGIN in ${PLUGINS}; do
       INSTALL_DIR=$(echo $DIR | sed -r "s#$PLGIN_SRC_DIR#$INSTALLEDDIR#")
       #echo "${INSTALL_DIR}"
       mkdir -p "${INSTALL_DIR}"
-      ls -la "${INSTALL_DIR}"
+      ls -lad "${INSTALL_DIR}"
     done
 
 
