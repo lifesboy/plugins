@@ -21,9 +21,10 @@ for PLGIN in ${PLUGINS}; do
 
   if [ $method = "install" ] || [ $method = "all" ]; then
     for DIR in ${PLGIN_DIRS}; do
-      INSTALL_DIR=${DIR/$PLGIN_SRC_DIR/$INSTALLEDDIR}
+      INSTALL_DIR=$(echo $DIR | sed -r "s#$PLGIN_SRC_DIR#$INSTALLEDDIR#")
+      echo "${INSTALL_DIR}"
       # mkdir -p "${INSTALL_DIR}"
-      ls -la "${INSTALL_DIR}"
+      #ls -la "${INSTALL_DIR}"
     done
   fi
 done
